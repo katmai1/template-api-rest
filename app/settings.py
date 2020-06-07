@@ -24,8 +24,11 @@ env.read_env(env_file=f)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+PROJECT_TITLE = env.str("PROJECT_TITLE")
+PROJECT_NAME = env.str("PROJECT_NAME")
+PROJECT_EMAIL = env.str("PROJECT_EMAIL")
 
+# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!

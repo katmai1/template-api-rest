@@ -1,4 +1,4 @@
-{% load crispy_forms_tags %}
+{% load custom_tags %}
 {% load static %}
 
 <!doctype html>
@@ -9,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    {% comment %} font awesome {% endcomment %}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
 
     <link rel="stylesheet" type="text/css" href="{% static 'base/estilo.css' %}">
-    <title>Template</title>
+    <title>{% block title %}{% settings_value "PROJECT_TITLE" %}{% endblock %}</title>
   </head>
   <body>
     {% include 'base/navbar.html' %}
